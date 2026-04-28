@@ -1,0 +1,22 @@
+{
+  "name": "core-profile-api",
+  "version": "1.0.0",
+  "description": "Simple profile API built with Node.js and Express.",
+  "main": "src/server.js",
+  "scripts": {
+    "dev": "node src/server.js",
+    "start": "node src/server.js",
+    "test": "playwright test",
+    "test:api:internal": "playwright test --project=internal-api",
+    "test:api:external": "playwright test --project=external-api",
+    "test:api:reqres": "playwright test tests/api/external/reqres-playwright-api-test/reqres.api.spec.ts --project=external-api"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.3"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.44.0",
+    "dotenv": "^16.4.7"
+  }
+}
